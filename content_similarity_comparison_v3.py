@@ -190,7 +190,15 @@ def main():
 
     # ================== 新增全局标准化步骤 ==================
     # 提取所有特征列（排除文件名和综合得分）
-    features = df[["TF-IDF", "Jaccard", "LCS", "BERT", "Levenshtein"]]
+    features = df[
+        [
+            "TF-IDF",
+            "Jaccard",
+            "LCS",
+            "Levenshtein",
+            "BERT",
+        ]
+    ]
 
     # Z-Score 标准化（按列处理）
     scaler = StandardScaler()
